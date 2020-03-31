@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import uuid from 'uuid/v4';
+import {v4 as uuidv4} from 'uuid';
 import PropTypes from 'prop-types';
 
 const Formulario = ({crearCita}) => {
@@ -40,7 +40,7 @@ const Formulario = ({crearCita}) => {
         actualizarError(false);
 
         //Asigar un ID
-        cita.id = uuid();
+        cita.id = uuidv4();
 
 
         //Crear la cita
